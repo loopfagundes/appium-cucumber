@@ -53,4 +53,16 @@ public class CheckoutPage {
         return waitElement.toBeClickable(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))" +
                         ".scrollIntoView(new UiSelector().description(\"test-FINISH\"))"));
     }
+
+    public WebElement mensagemFinalizarLabel() {
+        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"THANK YOU FOR YOU ORDER\")"));
+    }
+
+    public WebElement iconeTresListraButton() {
+        return waitElement.toBeClickable(new AppiumBy.ByAndroidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(1)"));
+    }
+
+    public WebElement logoutButton() {
+        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-LOGOUT"));
+    }
 }

@@ -67,8 +67,24 @@ public class CheckoutStep {
         checkoutInteraction.clickNoFinish();
     }
 
+    @Entao("Verifico a mensagem de finalizar a compra")
+    public void verificar_mensagem() {
+        checkoutInteraction.mensagemFinalizaACompra();
+        helper.takeScreenshot("Tela de Checkout Complete");
+    }
+
+    @Entao("Clico o icone tres listras no topo")
+    public void clica_icone_no_topo() {
+        checkoutInteraction.clickTresListras();
+    }
+
+    @Entao("Clico no logout para sair da conta")
+    public void logout_usuario() {
+        checkoutInteraction.clickLogout();
+    }
+
     @Entao("Encerro a sessão")
-    public void Encerro_a_sessao() {
+    public void encerro_a_sessao() {
         DriverFactory.quitDriver();
     }
 }

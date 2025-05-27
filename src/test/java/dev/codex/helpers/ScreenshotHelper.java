@@ -16,7 +16,7 @@ public class ScreenshotHelper {
         this.driver = driver;
     }
 
-    public void esperarTelaCarregar() {
+    private void esperarTelaCarregar() {
         String pageSourceAntes;
         String pageSourceDepois = "";
         int tentativas = 0;

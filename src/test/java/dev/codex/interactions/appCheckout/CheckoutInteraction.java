@@ -47,4 +47,16 @@ public class CheckoutInteraction {
     public void clickNoFinish() {
         element.click(page.finishButton());
     }
+
+    public void mensagemFinalizaACompra() {
+        element.assertTextEquals("THANK YOU FOR YOU ORDER", page.mensagemFinalizarLabel());
+    }
+
+    public void clickTresListras() {
+        element.click(page.iconeTresListraButton());
+    }
+
+    public void clickLogout() {
+        element.click(page.logoutButton());
+    }
 }

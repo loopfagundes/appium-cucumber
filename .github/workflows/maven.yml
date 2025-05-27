@@ -12,6 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -27,8 +28,25 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build with Maven
+      - name: Build with Maven (skip tests)
         run: mvn clean install -DskipTests=true
 
-      - name: Maven Test
+      - name: Start Android emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 31
+          target: google_apis
+          arch: x86_64
+          profile: pixel
+          emulator-options: -no-window -no-audio
+          disable-animations: true
+          script: echo "Emulator ready"
+
+      - name: Start Appium server
+        run: |
+          npm install -g appium
+          appium --log-level error &
+          sleep 20
+
+      - name: Run tests
         run: mvn test

@@ -13,4 +13,7 @@ Funcionalidade: Checkout informacao e verificar geral
     E Verifico valor do taxa
     E Verifico valor final
     Quando Clico no finish para realizar a compra
+    E Verifico a mensagem de finalizar a compra
+    E Clico o icone tres listras no topo
+    Quando Clico no logout para sair da conta
     Entao Encerro a sessão

@@ -1,4 +1,4 @@
-package dev.codex.utils;
+package dev.codex.helpers;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;

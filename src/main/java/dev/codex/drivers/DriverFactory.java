@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 public class DriverFactory {
 
-    private static final String DIR_APK = "src/test/resources/apps/TestApp.apk";
+    private static final String DIR_APK = "src/main/resources/apps/TestApp.apk";
     private static AppiumDriver driver;
 
     public static AppiumDriver getDriver() {

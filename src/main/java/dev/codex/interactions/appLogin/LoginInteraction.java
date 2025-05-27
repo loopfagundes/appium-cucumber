@@ -1,5 +1,7 @@
 package dev.codex.interactions.appLogin;
 
+import dev.codex.dto.loginDTO.LoginDTO;
+import dev.codex.factory.loginFactory.LoginFactory;
 import dev.codex.pages.appLogin.LoginPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
@@ -14,8 +16,8 @@ public class LoginInteraction {
     }
 
     public void preencherDadosValidos() {
-        element.setText("standard_user", page.usernameLoginField());
-        element.setText("secret_sauce", page.passwordLoginField());
+        element.setText(LoginFactory.loginDto().getUsuario(), page.usernameLoginField());
+        element.setText(LoginFactory.loginDto().getSenha(), page.passwordLoginField());
     }
 
     public void clickLogin() {

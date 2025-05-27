@@ -20,7 +20,7 @@ public class ScreenshotHelper {
         String pageSourceAntes;
         String pageSourceDepois = "";
         int tentativas = 0;
-        int maxTentativas = 10;
+        int maxTentativas = 5;
 
         do {
             pageSourceAntes = pageSourceDepois;

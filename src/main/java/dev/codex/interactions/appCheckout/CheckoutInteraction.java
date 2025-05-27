@@ -1,5 +1,6 @@
 package dev.codex.interactions.appCheckout;
 
+import dev.codex.factory.dataFactory.DataFactory;
 import dev.codex.pages.appCheckout.CheckoutPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
@@ -15,9 +16,9 @@ public class CheckoutInteraction {
     }
 
     public void preencharDadosValidosNoCheckout() {
-        element.setText("Ricardo", page.firstNameField());
-        element.setText("Costa", page.lastNameField());
-        element.setText("9111000", page.postalCodeField());
+        element.setText(DataFactory.dataDto().getNome(), page.firstNameField());
+        element.setText(DataFactory.dataDto().getSobrenome(), page.lastNameField());
+        element.setText(DataFactory.dataDto().getCep(), page.postalCodeField());
     }
 
     public void clickNoContinue() {

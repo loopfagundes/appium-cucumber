@@ -1,6 +1,6 @@
 package dev.codex.pages.appCheckout;
 
-import dev.codex.utils.WaitElement;
+import dev.codex.helpers.WaitElement;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;

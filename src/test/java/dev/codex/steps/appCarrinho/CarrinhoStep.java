@@ -1,25 +1,25 @@
 package dev.codex.steps.appCarrinho;
 
 import dev.codex.drivers.DriverFactory;
+import dev.codex.helpers.ScreenshotHelper;
 import dev.codex.interactions.appCarrinho.CarrinhoInteraction;
-import dev.codex.utils.ScreenshotUtils;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.pt.Entao;
 
 public class CarrinhoStep {
 
     private final CarrinhoInteraction carrinhoInteraction;
-    private final ScreenshotUtils utils;
+    private final ScreenshotHelper helper;
 
     public CarrinhoStep() {
         AppiumDriver driver = DriverFactory.getDriver();
         carrinhoInteraction = new CarrinhoInteraction(driver);
-        utils = new ScreenshotUtils(driver);
+        helper = new ScreenshotHelper(driver);
     }
 
     @Entao("Sou redirecionado para tela de Seu Carrinho")
     public void redirecionado_tela_checkout() {
-       utils.takeScreenshot("Tela de Carrinho");
+       helper.takeScreenshot("Tela de Carrinho");
     }
 
     @Entao("Valido quantidade do item no carrinho")

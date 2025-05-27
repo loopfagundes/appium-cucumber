@@ -1,25 +1,25 @@
 package dev.codex.steps.appCheckout;
 
 import dev.codex.drivers.DriverFactory;
+import dev.codex.helpers.ScreenshotHelper;
 import dev.codex.interactions.appCheckout.CheckoutInteraction;
-import dev.codex.utils.ScreenshotUtils;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.pt.Entao;
 
 public class CheckoutStep {
 
     private final CheckoutInteraction checkoutInteraction;
-    private final ScreenshotUtils utils;
+    private final ScreenshotHelper helper;
 
     public CheckoutStep() {
         AppiumDriver driver = DriverFactory.getDriver();
         checkoutInteraction = new CheckoutInteraction(driver);
-        utils = new ScreenshotUtils(driver);
+        helper = new ScreenshotHelper(driver);
     }
 
     @Entao("Sou redirecionado para tela de Checkout: Information")
     public void redirecionado_tela_checkout_information() {
-        utils.takeScreenshot("Tela de Checkout Information");
+        helper.takeScreenshot("Tela de Checkout Information");
     }
 
     @Entao("Preencho os dados validos nos campos de Checkout")
@@ -34,7 +34,7 @@ public class CheckoutStep {
 
     @Entao("Sou redirecionado para tela de Checkout: Overview")
     public void redirecionado_tela_checkout_overview() {
-        utils.takeScreenshot("Tela de Checkout Overview");
+        helper.takeScreenshot("Tela de Checkout Overview");
     }
 
     @Entao("Verifico quantidade do item")

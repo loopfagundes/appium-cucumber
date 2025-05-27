@@ -1,6 +1,5 @@
 
 .idea/
-reports/
 target/
 *.iml
 .settings/

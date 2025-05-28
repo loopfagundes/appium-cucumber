@@ -57,8 +57,10 @@ appium --allow-cors
 
 ## 🌐 Acesso ao Inspector
 
-Quando executado com `--use-plugins=inspector`, acesse através do navegador:
+Quando executado com `appium --use-plugins=inspector --allow-cors`, acesse através do navegador:
 
 ```
 http://localhost:4723/inspector
 ```
+
+## :chart_with_downwards_trend:	

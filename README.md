@@ -63,5 +63,7 @@ Quando executado com `appium --use-plugins=inspector --allow-cors`, acesse atrav
 http://localhost:4723/inspector
 ```
 
+---
+
 ## 📊  Screenshot Report
 ![](src/main/resources/img/reports/Captura%20de%20tela%20de%20report.png)

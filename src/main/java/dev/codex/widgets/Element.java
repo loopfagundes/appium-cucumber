@@ -18,7 +18,7 @@ public class Element {
         }
     }
 
-    public void setText(String text, WebElement locator) {
+    public void setText(WebElement locator, String text) {
         try {
             if (locator.isDisplayed() && locator.isEnabled()) {
                 locator.sendKeys(text);

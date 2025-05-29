@@ -1,9 +1,8 @@
 package dev.codex.interactions.appCheckout;
 
 import java.time.Duration;
-
+import dev.codex.helpers.SwipeHelper;
 import org.openqa.selenium.support.PageFactory;
-
 import dev.codex.factory.dataFactory.DataFactory;
 import dev.codex.pages.appCheckout.CheckoutPage;
 import dev.codex.widgets.Element;
@@ -14,10 +13,12 @@ public class CheckoutInteraction extends CheckoutPage {
 
     private static final int TIME_OUT = 10;
     private final Element element;
+    private final SwipeHelper swipe;
 
     public CheckoutInteraction(AppiumDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(TIME_OUT)), this);
         element = new Element();
+        swipe = new SwipeHelper(driver);
     }
 
     public void preencharDadosValidosNoCheckout() {
@@ -51,6 +52,7 @@ public class CheckoutInteraction extends CheckoutPage {
     }
 
     public void clickNoFinish() {
+        swipe.swipeToElement(finalizarButton);
         element.click(finalizarButton);
     }
 

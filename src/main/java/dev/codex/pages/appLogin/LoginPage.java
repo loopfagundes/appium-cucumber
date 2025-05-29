@@ -1,26 +1,16 @@
 package dev.codex.pages.appLogin;
 
-import dev.codex.helpers.WaitElement;
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage {
-    private final WaitElement waitElement;
 
-    public LoginPage(AppiumDriver driver) {
-        waitElement = new WaitElement(driver);
-    }
+    @AndroidFindBy(accessibility = "test-Username")
+    public WebElement usuarioLoginField;
 
-    public WebElement usernameLoginField() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-Username"));
-    }
+    @AndroidFindBy(accessibility = "test-Password")
+    public WebElement senhaLoginField;
 
-    public WebElement passwordLoginField() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-Password"));
-    }
-
-    public WebElement loginButton() {
-        return waitElement.toBeClickable(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"LOGIN\")"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"LOGIN\")")
+    public WebElement loginButton;
 }

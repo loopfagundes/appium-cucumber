@@ -1,26 +1,29 @@
 package dev.codex.interactions.appLogin;
 
-import dev.codex.dto.loginDTO.LoginDTO;
 import dev.codex.factory.loginFactory.LoginFactory;
 import dev.codex.pages.appLogin.LoginPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.support.PageFactory;
 
-public class LoginInteraction {
-    private final LoginPage page;
+import java.time.Duration;
+
+public class LoginInteraction extends LoginPage {
+    private static final int TIME_OUT = 10;
     private final Element element;
 
     public LoginInteraction(AppiumDriver driver) {
-        page = new LoginPage(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(TIME_OUT)), this);
         element = new Element();
     }
 
     public void preencherDadosValidos() {
-        element.setText(LoginFactory.loginDto().getUsuario(), page.usernameLoginField());
-        element.setText(LoginFactory.loginDto().getSenha(), page.passwordLoginField());
+        element.setText(usuarioLoginField, LoginFactory.loginDto().getUsuario());
+        element.setText(senhaLoginField, LoginFactory.loginDto().getSenha());
     }
 
     public void clickLogin() {
-        element.click(page.loginButton());
+        element.click(loginButton);
     }
 }

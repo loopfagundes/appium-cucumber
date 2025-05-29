@@ -1,68 +1,47 @@
 package dev.codex.pages.appCheckout;
 
-import dev.codex.helpers.WaitElement;
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+
 import org.openqa.selenium.WebElement;
 
 public class CheckoutPage {
 
-    private final WaitElement waitElement;
+    @AndroidFindBy(accessibility = "test-First Name")
+    public WebElement nomeUsuarioCheckoutField;
 
-    public CheckoutPage(AppiumDriver driver) {
-        waitElement = new WaitElement(driver);
-    }
+    @AndroidFindBy(accessibility = "test-Last Name")
+    public WebElement sobrenomeUsuarioCheckoutField;
 
-    public WebElement firstNameField() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-First Name"));
-    }
+    @AndroidFindBy(accessibility = "test-Zip/Postal Code")
+    public WebElement cepCheckoutField;
 
-    public WebElement lastNameField() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-Last Name"));
-    }
+    @AndroidFindBy(accessibility = "test-CONTINUE")
+    public WebElement continueCheckoutButton;
 
-    public WebElement postalCodeField() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-Zip/Postal Code"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"1\").instance(1)")
+    public WebElement quantidadeItemNoCheckoutLabel;
 
-    public WebElement continueCheckoutButton() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-CONTINUE"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Sauce Labs Backpack\")")
+    public WebElement nomeDoItemNoCheckoutLabel;
 
-    public WebElement quantidadeItemNoCheckoutLabel() {
-        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"1\").instance(1)"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"$29.99\")")
+    public WebElement valorDoItemNoCheckoutLabel;
 
-    public WebElement nomeDoItemNoCheckoutLabel() {
-        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"Sauce Labs Backpack\")"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Tax: $2.40\")")
+    public WebElement valorDoTaxaNoCheckoutLabel;
 
-    public WebElement valorDoItemNoCheckout() {
-        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"$29.99\")"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Total: $32.39\")")
+    public WebElement valorFinalNoCheckoutLabel;
 
-    public WebElement valorTaxaNoCheckoutLabel() {
-        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"Tax: $2.40\")"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().description(\"test-FINISH\")")
+    public WebElement finalizarButton;
 
-    public WebElement valorFinalNoCheckoutLabel() {
-        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"Total: $32.39\")"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"THANK YOU FOR YOU ORDER\")")
+    public WebElement mensagemFinalizarLabel;
 
-    public WebElement finishButton() {
-        return waitElement.toBeClickable(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))" +
-                        ".scrollIntoView(new UiSelector().description(\"test-FINISH\"))"));
-    }
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ImageView\").instance(1)")
+    public WebElement iconeTresListraButton;
 
-    public WebElement mensagemFinalizarLabel() {
-        return waitElement.visibilityOf(new AppiumBy.ByAndroidUIAutomator("new UiSelector().text(\"THANK YOU FOR YOU ORDER\")"));
-    }
-
-    public WebElement iconeTresListraButton() {
-        return waitElement.toBeClickable(new AppiumBy.ByAndroidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(1)"));
-    }
-
-    public WebElement logoutButton() {
-        return waitElement.toBeClickable(new AppiumBy.ByAccessibilityId("test-LOGOUT"));
-    }
+    @AndroidFindBy(accessibility = "test-LOGOUT")
+    public WebElement logoutButton;
 }

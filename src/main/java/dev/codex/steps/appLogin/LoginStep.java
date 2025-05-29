@@ -17,13 +17,12 @@ public class LoginStep {
         helper = new ScreenshotHelper(driver);
     }
 
-    @Dado("Eu estou na pagina de Login")
+    @Entao("Eu estou na pagina de Login")
     public void eu_estou_na_pagina_de_Login() throws InterruptedException {
-
         helper.takeScreenshot("Tela de Login");
     }
 
-    @Quando("Preencho dados validos nos campos de login")
+    @Entao("Preencho dados validos nos campos de login")
     public void preencho_no_campo_username() {
         loginInteraction.preencherDadosValidos();
     }

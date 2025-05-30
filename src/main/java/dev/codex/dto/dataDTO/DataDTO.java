@@ -2,7 +2,6 @@ package dev.codex.dto.dataDTO;
 
 import lombok.*;
 
-
 @Getter
 @Setter
 @NoArgsConstructor

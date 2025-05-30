@@ -4,7 +4,6 @@ import dev.codex.drivers.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-
 public class Hooks {
 
     @Before

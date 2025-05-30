@@ -33,8 +33,7 @@ public class CheckoutPage {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Total: $32.39\")")
     public WebElement valorFinalNoCheckoutLabel;
 
-    @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().scrollable(true))" +
-            ".scrollIntoView(new UiSelector().description(\"test-FINISH\"))")
+    @AndroidFindBy(uiAutomator = "new UiSelector().description(\"test-FINISH\")")
     public WebElement finalizarButton;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"THANK YOU FOR YOU ORDER\")")

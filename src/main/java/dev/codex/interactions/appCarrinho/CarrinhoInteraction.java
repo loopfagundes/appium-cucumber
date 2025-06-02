@@ -16,7 +16,7 @@ public class CarrinhoInteraction extends CarrinhoPage {
 
     public CarrinhoInteraction(AppiumDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(TIME_OUT)), this);
-        element = new Element();
+        element = new Element(driver);
     }
 
     public void validarQuantidadeItemCarrinho() {

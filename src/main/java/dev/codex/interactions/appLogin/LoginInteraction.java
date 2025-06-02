@@ -1,7 +1,6 @@
 package dev.codex.interactions.appLogin;
 
 import dev.codex.factory.loginFactory.LoginFactory;
-import dev.codex.helpers.WaitElementHelper;
 import dev.codex.pages.appLogin.LoginPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
@@ -14,12 +13,10 @@ public class LoginInteraction extends LoginPage {
     
     private static final int TIME_OUT = 10;
     private final Element element;
-    private final WaitElementHelper wait;
 
     public LoginInteraction(AppiumDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(TIME_OUT)), this);
-        element = new Element();
-        wait = new WaitElementHelper(driver, TIME_OUT);
+        element = new Element(driver);
     }
 
     public void preencherDadosValidos() {
@@ -28,7 +25,6 @@ public class LoginInteraction extends LoginPage {
     }
 
     public void clickLogin() {
-        wait.waitForClickable(loginButton);
         element.click(loginButton);
     }
 }

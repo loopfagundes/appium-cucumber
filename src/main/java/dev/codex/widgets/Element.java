@@ -3,14 +3,24 @@ package dev.codex.widgets;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 
+import dev.codex.helpers.WaitElementHelper;
+import io.appium.java_client.AppiumDriver;
+
 import java.util.NoSuchElementException;
 
 public class Element {
 
+    private static final int TIME_OUT = 15;
+    private final WaitElementHelper wait;
+
+    public Element(AppiumDriver driver) {
+        wait = new WaitElementHelper(driver, TIME_OUT);
+    }
+
     public void click(WebElement locator) {
         try {
             if (locator.isDisplayed() && locator.isEnabled()) {
-                locator.click();
+                wait.waitForClickable(locator).click();
             }
         } catch (InvalidElementStateException | NoSuchElementException | StaleElementReferenceException |
                  TimeoutException e) {

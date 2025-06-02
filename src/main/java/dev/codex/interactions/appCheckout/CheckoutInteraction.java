@@ -17,7 +17,7 @@ public class CheckoutInteraction extends CheckoutPage {
 
     public CheckoutInteraction(AppiumDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(TIME_OUT)), this);
-        element = new Element();
+        element = new Element(driver);
         swipe = new SwipeHelper(driver);
     }
 

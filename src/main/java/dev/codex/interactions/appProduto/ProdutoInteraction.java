@@ -16,7 +16,7 @@ public class ProdutoInteraction extends ProdutoPage {
 
     public ProdutoInteraction(AppiumDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(TIME_OUT)),this);
-        element = new Element();
+        element = new Element(driver);
     }
 
     public void validarONomeDoItem() {

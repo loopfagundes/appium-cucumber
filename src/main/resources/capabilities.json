@@ -1,0 +1,12 @@
+{
+  "platformName": "Android",
+  "automationName": "UiAutomator2",
+  "platformVersion": "16",
+  "deviceName": "Android Emulator",
+  "appPackage": "com.swaglabsmobileapp",
+  "appActivity": "com.swaglabsmobileapp.SplashActivity",
+  "appWaitActivity": "*",
+  "app": "src/main/resources/apps/TestApp.apk",
+  "noReset": false,
+  "fullReset": true
+}

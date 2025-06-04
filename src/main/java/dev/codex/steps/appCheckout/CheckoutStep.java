@@ -82,9 +82,4 @@ public class CheckoutStep {
     public void logout_usuario() {
         checkoutInteraction.clickLogout();
     }
-
-    @Entao("Encerro a sessão")
-    public void encerro_a_sessao() {
-        DriverFactory.quitDriver();
-    }
 }

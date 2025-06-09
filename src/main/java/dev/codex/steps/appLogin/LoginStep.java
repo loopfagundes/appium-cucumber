@@ -18,7 +18,7 @@ public class LoginStep {
     }
 
     @Entao("Eu estou na pagina de Login")
-    public void eu_estou_na_pagina_de_Login() throws InterruptedException {
+    public void eu_estou_na_pagina_de_Login() {
         helper.takeScreenshot("Tela de Login");
     }
 

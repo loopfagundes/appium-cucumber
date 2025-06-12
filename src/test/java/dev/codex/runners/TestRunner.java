@@ -8,6 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "classpath:features",
         glue = {"dev.codex.steps", "dev.codex.tools"},
+        tags = "@standard_user",
         plugin = {
                 "pretty",
                 "html:reports/cucumber.html",

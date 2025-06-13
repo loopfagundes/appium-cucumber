@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
         tags = "@standard_user",
         plugin = {
                 "pretty",
-                "html:reports/cucumber.html",
-                "json:reports/cucumber.json",
-                "junit:reports/cucumber.xml"
+                "html:target/cucumber-reports.html",
+                "json:target/cucumber.json",
+                "summary"
         }
 )
 

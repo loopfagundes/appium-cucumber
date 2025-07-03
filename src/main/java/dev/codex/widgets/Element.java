@@ -1,6 +1,5 @@
 package dev.codex.widgets;
 
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 
 import dev.codex.helpers.WaitElementHelper;
@@ -24,7 +23,7 @@ public class Element {
             }
         } catch (InvalidElementStateException | NoSuchElementException | StaleElementReferenceException |
                  TimeoutException e) {
-            throw new RuntimeException("[click] Erro na validação do elemento.", e);
+            throw new IllegalArgumentException("[click] Erro na validação do elemento.", e);
         }
     }
 
@@ -36,7 +35,7 @@ public class Element {
                 throw new IllegalStateException("[sendKeys] Elemento não está visível ou não está habilitado.");
             }
         } catch (InvalidElementStateException | NoSuchElementException | StaleElementReferenceException | TimeoutException e) {
-            throw new RuntimeException("[sendKeys] Erro ao tentar enviar texto para o elemento.", e);
+            throw new IllegalArgumentException("[sendKeys] Erro ao tentar enviar texto para o elemento.", e);
         }
     }
 
@@ -44,12 +43,14 @@ public class Element {
         try {
             if (locator.isDisplayed() && locator.isEnabled()) {
                 String actual = locator.getText();
-                Assertions.assertEquals(expected, actual);
+                if(!expected.equals(actual)) {
+                    throw new IllegalStateException("[Assert] Texto diferente: esperado = " + expected + ", atual = " + actual );
+                }
             } else {
                 throw new IllegalStateException("[Assert] Elemento não está visível ou habilitado.");
             }
         } catch (InvalidElementStateException | NoSuchElementException | StaleElementReferenceException | TimeoutException e) {
-            throw new RuntimeException("[Assert] Erro na validação do elemento.", e);
+            throw new IllegalArgumentException("[Assert] Erro na validação do elemento.", e);
         }
     }
 }

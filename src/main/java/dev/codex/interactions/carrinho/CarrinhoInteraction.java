@@ -1,10 +1,10 @@
-package dev.codex.interactions.appCarrinho;
+package dev.codex.interactions.carrinho;
 
 import java.time.Duration;
 
 import org.openqa.selenium.support.PageFactory;
 
-import dev.codex.pages.appCarrinho.CarrinhoPage;
+import dev.codex.pages.carrinho.CarrinhoPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

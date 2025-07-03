@@ -1,7 +1,7 @@
-package dev.codex.interactions.appLogin;
+package dev.codex.interactions.login;
 
 import dev.codex.factory.loginFactory.LoginFactory;
-import dev.codex.pages.appLogin.LoginPage;
+import dev.codex.pages.login.LoginPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

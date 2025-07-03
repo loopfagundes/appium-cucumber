@@ -1,4 +1,4 @@
-package dev.codex.pages.appCarrinho;
+package dev.codex.pages.carrinho;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

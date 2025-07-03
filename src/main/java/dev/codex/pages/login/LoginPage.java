@@ -1,4 +1,4 @@
-package dev.codex.pages.appLogin;
+package dev.codex.pages.login;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;

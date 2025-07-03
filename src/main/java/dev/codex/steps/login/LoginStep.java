@@ -1,8 +1,8 @@
-package dev.codex.steps.appLogin;
+package dev.codex.steps.login;
 
 import dev.codex.drivers.DriverFactory;
 import dev.codex.helpers.ScreenshotHelper;
-import dev.codex.interactions.appLogin.LoginInteraction;
+import dev.codex.interactions.login.LoginInteraction;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.pt.*;
 
@@ -18,17 +18,17 @@ public class LoginStep {
     }
 
     @Entao("Eu estou na pagina de Login")
-    public void eu_estou_na_pagina_de_Login() {
+    public void euEstouNaPaginaDeLogin() {
         helper.takeScreenshot("Tela de Login");
     }
 
     @Entao("Preencho dados pardao do usuario validos nos campos de login")
-    public void preencho_no_campo_username() {
+    public void preenchoDadosValidos() {
         loginInteraction.preencherDadosDoUsuarioPadraoValidos();
     }
 
     @Entao("Clico no botão de login")
-    public void clico_no_botao_de_login() {
+    public void clicoBotaoLogin() {
         loginInteraction.clickLogin();
     }
 }

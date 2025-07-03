@@ -21,7 +21,7 @@ public class DriverFactory {
             try {
                 startDriver();
             } catch (IOException e) {
-                throw new RuntimeException("Erro ao iniciar o driver Appium", e);
+                throw new IllegalArgumentException("Erro ao iniciar o driver Appium", e);
             }
         }
         return driver;

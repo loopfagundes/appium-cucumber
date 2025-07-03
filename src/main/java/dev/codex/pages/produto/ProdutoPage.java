@@ -1,4 +1,4 @@
-package dev.codex.pages.appProduto;
+package dev.codex.pages.produto;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

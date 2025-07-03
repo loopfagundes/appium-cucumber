@@ -1,4 +1,4 @@
-package dev.codex.pages.appCheckout;
+package dev.codex.pages.checkout;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

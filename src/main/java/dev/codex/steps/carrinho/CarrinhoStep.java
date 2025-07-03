@@ -1,8 +1,8 @@
-package dev.codex.steps.appCarrinho;
+package dev.codex.steps.carrinho;
 
 import dev.codex.drivers.DriverFactory;
 import dev.codex.helpers.ScreenshotHelper;
-import dev.codex.interactions.appCarrinho.CarrinhoInteraction;
+import dev.codex.interactions.carrinho.CarrinhoInteraction;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.pt.Entao;
 
@@ -18,27 +18,27 @@ public class CarrinhoStep {
     }
 
     @Entao("Sou redirecionado para tela de Seu Carrinho")
-    public void redirecionado_tela_checkout() {
+    public void redirecionadoTelaCheckout() {
        helper.takeScreenshot("Tela de Carrinho");
     }
 
     @Entao("Valido quantidade do item no carrinho")
-    public void valido_quantidade_item() {
+    public void validoQuantidadeItem() {
         carrinhoInteraction.validarQuantidadeItemCarrinho();
     }
 
     @Entao("Valido o nome do item no carrinho")
-    public void valido_nome_item() {
+    public void validoNomeItem() {
         carrinhoInteraction.validarONomeItem();
     }
 
     @Entao("Valido o valor do item no carrinho")
-    public void valido_valor_item() {
+    public void validoValorItem() {
         carrinhoInteraction.validarValorDoItem();
     }
 
     @Entao("Clico o botao checkout")
-    public void clico_checkout() {
+    public void clicoBotaoCheckout() {
         carrinhoInteraction.clickNoCheckout();
     }
 }

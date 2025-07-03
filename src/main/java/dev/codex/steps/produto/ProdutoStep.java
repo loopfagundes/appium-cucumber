@@ -1,9 +1,9 @@
-package dev.codex.steps.appProduto;
+package dev.codex.steps.produto;
 
 import dev.codex.drivers.DriverFactory;
 
 import dev.codex.helpers.ScreenshotHelper;
-import dev.codex.interactions.appProduto.ProdutoInteraction;
+import dev.codex.interactions.produto.ProdutoInteraction;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.pt.Entao;
 
@@ -19,27 +19,27 @@ public class ProdutoStep {
     }
 
     @Entao("Sou redirecionado para tela dos produtos")
-    public void redirecionado_tela_produtos() {
+    public void redirecionadoTelaProdutos() {
         helper.takeScreenshot("Tela de Produto");
     }
 
     @Entao("Valido o nome do item")
-    public void valido_nome_produto() {
+    public void validoNomeProduto() {
         produtoInteraction.validarONomeDoItem();
     }
 
     @Entao("Seleciono um item")
-    public void seleciono_produto() {
+    public void selecionoProduto() {
         produtoInteraction.selecionarUmItem();
     }
 
     @Entao("Valido quantidade o item no icone do carrinho")
-    public void valido_quantidade_item_carrinho() {
+    public void validoQuantidadeItemCarrinho() {
         produtoInteraction.validarQuantidadeItemNoIconeDoCarrinho();
     }
 
     @Entao("Clico o icone do carrinho para redirecionar na tela do carrinho")
-    public void acessar_para_tela_carrinho() {
+    public void acessarParaTelaCarrinho() {
        produtoInteraction.clickNoCarrinho();
     }
 }

@@ -1,8 +1,8 @@
-package dev.codex.steps.appCheckout;
+package dev.codex.steps.checkout;
 
 import dev.codex.drivers.DriverFactory;
 import dev.codex.helpers.ScreenshotHelper;
-import dev.codex.interactions.appCheckout.CheckoutInteraction;
+import dev.codex.interactions.checkout.CheckoutInteraction;
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.pt.Entao;
 
@@ -18,68 +18,68 @@ public class CheckoutStep {
     }
 
     @Entao("Sou redirecionado para tela de Checkout: Information")
-    public void redirecionado_tela_checkout_information() {
+    public void redirecionadoTelaCheckoutInformation() {
         helper.takeScreenshot("Tela de Checkout Information");
     }
 
     @Entao("Preencho os dados validos nos campos de Checkout")
-    public void preencho_dados_validos_checkout() {
+    public void preenchoDadosValidosCheckout() {
         checkoutInteraction.preencharDadosValidosNoCheckout();
     }
 
     @Entao("Clico o botao continue")
-    public void clico_continue() {
+    public void clicoBotaoContinue() {
         checkoutInteraction.clickNoContinue();
     }
 
     @Entao("Sou redirecionado para tela de Checkout: Overview")
-    public void redirecionado_tela_checkout_overview() {
+    public void redirecionadoTelaCheckoutOverview() {
         helper.takeScreenshot("Tela de Checkout Overview");
     }
 
     @Entao("Verifico quantidade do item")
-    public void verificar_quantidade_item() {
+    public void verificarQuantidadeItem() {
         checkoutInteraction.validarQuantidadeItemNoCheckout();
     }
 
     @Entao("Verifico o nome do item")
-    public void verificar_nome_item() {
+    public void verificarNomeItem() {
         checkoutInteraction.validarONomeDoItemNoCheckout();
     }
 
     @Entao("Verifico o valor do item")
-    public void verificar_valor_item() {
+    public void verificarValorItem() {
         checkoutInteraction.validarValorDoItemNoCheckout();
     }
 
     @Entao("Verifico valor do taxa")
-    public void verificar_valor_taxa() {
+    public void verificarValorTaxa() {
         checkoutInteraction.validarValorTaxaNoCheckout();
     }
 
     @Entao("Verifico valor final")
-    public void verificar_valor_final() {
+    public void verificarValorFinal() {
         checkoutInteraction.validarValorFinalNoCheckout();
     }
 
     @Entao("Clico no finish para realizar a compra")
-    public void clica_finish() {
+    public void clicaBotaoFinish() {
         checkoutInteraction.clickNoFinish();
     }
 
     @Entao("Verifico a mensagem de finalizar a compra")
-    public void verificar_mensagem() {
+    public void verificarMensagem() {
         checkoutInteraction.mensagemFinalizaACompra();
         helper.takeScreenshot("Tela de Checkout Complete");
     }
 
     @Entao("Clico o icone tres listras no topo")
-    public void clica_icone_no_topo() {
+    public void clicaIconeNoTopo() {
         checkoutInteraction.clickTresListras();
     }
 
     @Entao("Clico no logout para sair da conta")
-    public void logout_usuario() {
+    public void logoutUsuario() {
         checkoutInteraction.clickLogout();
     }
 }

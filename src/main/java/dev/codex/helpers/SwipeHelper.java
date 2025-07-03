@@ -43,9 +43,9 @@ public class SwipeHelper {
                     break;
                 }
             } catch (Exception ignored) {
+                swipeUp();
+                tries++;
             }
-            swipeUp();
-            tries++;
         }
     }
 }

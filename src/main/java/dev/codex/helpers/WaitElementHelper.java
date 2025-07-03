@@ -15,23 +15,7 @@ public class WaitElementHelper {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
     }
 
-    public WebElement waitForVisibility(WebElement element) {
-        return wait.until(ExpectedConditions.visibilityOf(element));
-    }
-
     public WebElement waitForClickable(WebElement element) {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
-    public boolean waitForText(WebElement element, String text) {
-        return wait.until(ExpectedConditions.textToBePresentInElement(element, text));
-    }
-
-    public WebElement waitForPresence(org.openqa.selenium.By locator) {
-        return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-    }
-
-    public boolean waitForInvisibility(WebElement element) {
-        return wait.until(ExpectedConditions.invisibilityOf(element));
     }
 }

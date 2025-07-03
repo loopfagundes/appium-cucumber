@@ -1,10 +1,10 @@
-package dev.codex.interactions.appCheckout;
+package dev.codex.interactions.checkout;
 
 import java.time.Duration;
 import dev.codex.helpers.SwipeHelper;
 import org.openqa.selenium.support.PageFactory;
 import dev.codex.factory.dataFactory.DataFactory;
-import dev.codex.pages.appCheckout.CheckoutPage;
+import dev.codex.pages.checkout.CheckoutPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

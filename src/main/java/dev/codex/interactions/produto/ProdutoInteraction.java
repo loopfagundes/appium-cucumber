@@ -1,10 +1,10 @@
-package dev.codex.interactions.appProduto;
+package dev.codex.interactions.produto;
 
 import java.time.Duration;
 
 import org.openqa.selenium.support.PageFactory;
 
-import dev.codex.pages.appProduto.ProdutoPage;
+import dev.codex.pages.produto.ProdutoPage;
 import dev.codex.widgets.Element;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

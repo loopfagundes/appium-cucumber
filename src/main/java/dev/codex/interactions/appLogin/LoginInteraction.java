@@ -19,9 +19,14 @@ public class LoginInteraction extends LoginPage {
         element = new Element(driver);
     }
 
-    public void preencherDadosValidos() {
-        element.setText(usuarioLoginField, LoginFactory.loginDto().getUsuario());
-        element.setText(senhaLoginField, LoginFactory.loginDto().getSenha());
+    public void preencherDadosDoUsuarioPadraoValidos() {
+        element.setText(usuarioLoginField, LoginFactory.padraoUsuario().getUsuario());
+        element.setText(senhaLoginField, LoginFactory.padraoUsuario().getSenha());
+    }
+
+    public void preencherDadosDoUsuarioBugValidos() {
+        element.setText(usuarioLoginField, LoginFactory.bugUsuario().getUsuario());
+        element.setText(senhaLoginField, LoginFactory.bugUsuario().getSenha());
     }
 
     public void clickLogin() {

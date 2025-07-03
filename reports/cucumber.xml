@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="48.857" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-05T20:05:19.837515700Z">
-<testcase classname="Login" name="Login com sucesso" time="5.456">
+<testsuite name="Cucumber" time="56.194" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-12T13:46:39.671635100Z">
+<testcase classname="Fluxo de compra com usuario padrao" name="Login com sucesso" time="5.513">
 <system-out><![CDATA[
 Dado Eu estou na pagina de Login............................................passed
-Quando Preencho dados validos nos campos de login...........................passed
+Quando Preencho dados pardao do usuario validos nos campos de login.........passed
 Entao Clico no botão de login...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Escolhido um produto" name="Escolher um produto e validar quantidade dos itens" time="4.647">
+<testcase classname="Fluxo de compra com usuario padrao" name="Escolher um produto e validar quantidade dos itens" time="4.687">
 <system-out><![CDATA[
 Dado Sou redirecionado para tela dos produtos...............................passed
 Quando Valido o nome do item................................................passed
@@ -16,7 +16,7 @@ E Valido quantidade o item no icone do carrinho.............................pass
 Entao Clico o icone do carrinho para redirecionar na tela do carrinho.......passed
 ]]></system-out>
 </testcase>
-<testcase classname="Carrinho" name="Validar o item ao carrinho por quantidade, nome e valor" time="3.077">
+<testcase classname="Fluxo de compra com usuario padrao" name="Validar o item ao carrinho por quantidade, nome e valor" time="3.171">
 <system-out><![CDATA[
 Dado Sou redirecionado para tela de Seu Carrinho............................passed
 Quando Valido quantidade do item no carrinho................................passed
@@ -25,7 +25,7 @@ E Valido o valor do item no carrinho........................................pass
 Entao Clico o botao checkout................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Checkout informacao e verificar geral" name="Informacao dados do Usuario e verificar no checkout" time="26.084">
+<testcase classname="Fluxo de compra com usuario padrao" name="Informacao dados do Usuario e verificar no checkout" time="26.665">
 <system-out><![CDATA[
 Dado Sou redirecionado para tela de Checkout: Information...................passed
 Quando Preencho os dados validos nos campos de Checkout.....................passed

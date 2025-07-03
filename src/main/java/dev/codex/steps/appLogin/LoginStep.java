@@ -22,9 +22,9 @@ public class LoginStep {
         helper.takeScreenshot("Tela de Login");
     }
 
-    @Entao("Preencho dados validos nos campos de login")
+    @Entao("Preencho dados pardao do usuario validos nos campos de login")
     public void preencho_no_campo_username() {
-        loginInteraction.preencherDadosValidos();
+        loginInteraction.preencherDadosDoUsuarioPadraoValidos();
     }
 
     @Entao("Clico no botão de login")
